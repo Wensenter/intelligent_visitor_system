@@ -43,12 +43,56 @@
                     </dt>
                     <dd>
                         <input type="text" value="2020/01/10 星期四 10:00"  id="date-group1" readonly>
-                        <input type="text" value="2020/01/10 星期四 10:00"  id="date-group1" readonly>
+                        <input type="text" value="2020/01/10 星期四 10:00"  id="date-group2" readonly>
                     </dd>
                 </dl>
             </div>
             <!-- form -->
-            <form class="form"></form>
+            <form class="form">
+                <dl class="dl-idCard">
+                    <dt>
+                        <i class="icon-idCard"></i>
+                        <span>身份证正面照片</span>
+                    </dt>
+                    <dd>
+                        <div class="tkPhoto-box">
+                            <i class="icon-tkPhoto"></i>
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="main-visitor">
+                    <dt>
+                        <i class="icon-user"></i>
+                        <span>主访客</span>
+                    </dt>
+                    <dd>
+                        <input type="text" placeholder="姓名">
+                        <input type="text" placeholder="性别" class="sex">
+                        <input type="text" placeholder="身份证号">
+                        <input type="text" placeholder="手机号">
+                        <input type="text" placeholder="公司名称">
+                        <input type="text" placeholder="部门/职位">
+                    </dd>
+                </dl>
+                <dl class="goods">
+                    <dt>
+                        <i class="icon-good"></i>
+                        <span>随身物品</span>
+                    </dt>
+                    <dd>
+                        <div class="good-list">
+                            <span>手机 x2 <i class="icon-close"></i> </span>
+                            <span>笔记本电脑 <i class="icon-close"></i></span>
+                        </div>
+                        <button type="button">添加访客</button>
+                    </dd>
+                </dl>
+                <button>添加访客</button>
+            </form>
+            <div class="footer">
+                <button type="button">暂存</button>
+                <button type="button">提交</button>
+            </div>
         </div>
     </div>
 </body>

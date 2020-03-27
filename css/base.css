@@ -130,5 +130,73 @@
 .wrap .content .form {
   margin-top: 0.4rem /* 40/100 */;
   background: #fff;
+  border-radius: 0.2rem /* 20/100 */;
   box-shadow: 0px 3px 6px 3px #eee;
+  padding: 0.4rem /* 40/100 */ 0.3rem /* 30/100 */;
+}
+.wrap .content .form >dl >dt >i {
+  display: inline-block;
+  width: 0.4rem /* 40/100 */;
+  height: 0.4rem /* 40/100 */;
+  vertical-align: middle;
+  margin-right: 0.18rem /* 18/100 */;
+}
+.wrap .content .form >dl >dt .icon-idCard {
+  background: url("../img/idCard_icon.png") no-repeat;
+  background-size: 100%;
+}
+.wrap .content .form >dl >dt .icon-user {
+  background: url("../img/user_icon.png") no-repeat;
+  background-size: 100%;
+}
+.wrap .content .form >dl >dt .icon-good {
+  background: url("../img/good_icon.png") no-repeat;
+  background-size: 100%;
+}
+.wrap .content .form >dl >dt span {
+  font-size: 0.24rem /* 24/100 */;
+  color: #9b9b9b;
+  vertical-align: middle;
+}
+.wrap .content .form >dl >dd .tkPhoto-box {
+  height: 1.5rem /* 150/100 */;
+  width: 100%;
+  border-bottom: 0.01rem /* 1/100 */ solid #ccc;
+  text-align: center;
+}
+.wrap .content .form >dl >dd .icon-tkPhoto {
+  margin-top: 0.35rem /* 35/100 */;
+  display: inline-block;
+  width: 0.5rem /* 50/100 */;
+  height: 0.5rem /* 50/100 */;
+  background: url("../img/scan_icon.png") no-repeat;
+  background-size: 100%;
+}
+.wrap .content .form >dl >dd >input[type='text'] {
+  width: 4.98rem /* 498/100 */;
+  height: 0.42rem /* 42/100 */;
+  padding-top: 0.5rem /* 50/100 */;
+  border: 0;
+  outline: none;
+  border-bottom: 0.01rem /* 1/100 */ solid #d8d8d8;
+  margin: 0 0.5rem /* 50/100 */ 0 0.6rem /* 60/100 */;
+  font-size: 0.3rem /* 30/100 */;
+  color: #666;
+  text-indent: 0.1rem /* 10/100 */;
+}
+.wrap .content .form >dl >dd >input[type='text']::-webkit-input-placeholder {
+  color: #bbb;
+}
+.wrap .content .form >dl >dd .sex {
+  position: relative;
+}
+.wrap .content .form >dl >dd .sex:after {
+  content: '';
+  display: inline-block;
+}
+.wrap .content .form .main-visitor {
+  padding-top: 0.25rem /* 25/100 */;
+}
+.wrap .content .form .goods {
+  padding-top: 0.2rem /* 20/100 */;
 }
