@@ -1,0 +1,114 @@
+.wrap
+    min-height 100vh
+    font-size 0
+    .banner
+        height 3.85rem /* 385/100 */
+        width 100%
+        background url('../img/banner.png') no-repeat
+        background-size 100%
+        overflow hidden
+        .app-title
+            color #fff
+            font-size .48rem /* 48/100 */
+            margin-top 1.2rem /* 120/100 */
+            padding-left .25rem /* 25/100 */
+            font-weight bold
+        .app-order
+            color #C5C8CF
+            font-size .24rem /* 24/100 */
+            margin-top .3rem /* 30/100 */
+            text-align right
+            padding-right .3rem /* 30/100 */
+    .content
+        min-height calc(100vh - 3.85rem /* 385/100 */+ 1.1rem /* 110/100 */)
+        border-radius .5rem /* 50/100 */ .5rem /* 50/100 */ 0 0
+        background #F8FBFE
+        margin-top -1.1rem /* 110/100 */
+        padding .4rem /* 40/100 */
+        overflow hidden
+        .tip
+            width 100%
+            background #FEF9EC
+            border-radius .25rem /* 25/100 */
+            font-size .24rem /* 24/100 */
+            color #666
+            box-shadow 0px 3px 6px 3px rgba(239,227,194,1)
+            height .58rem /* 58/100 */
+            line-height .58rem /* 58/100 */
+            padding 0 .3rem /* 30/100 */
+            .icon-tip
+                display inline-block
+                width .4rem /* 40/100 */
+                height .4rem /* 40/100 */
+                border-radius 50%
+                background url('../img/tip_warning_icon.png') no-repeat
+                background-size 100%
+                vertical-align middle
+                margin-right .24rem /* 24/100 */
+        .card
+            width 100%
+            background #636A84
+            box-shadow 0px 3px 6px 3px rgba(184,190,222,1)
+            border-radius .2rem /* 20/100 */
+            padding .14rem /* 14/100 */.32rem /* 32/100 */
+            margin-top .4rem /* 40/100 */
+            >dl
+                border-bottom .01rem /* 1/100 */ solid #FFFFFF
+                margin-top .3rem /* 30/100 */
+                i
+                    display inline-block
+                    width .4rem /* 40/100 */
+                    height .4rem /* 40/100 */
+                    margin-right .24rem /* 24/100 */
+                >dt
+                    .icon-user
+                        background url('../img/user_icon.png') no-repeat
+                        background-size 100%
+                    .icon-date
+                        background url('../img/date_icon.png') no-repeat
+                        background-size 100%
+                    span
+                        font-size .24rem /* 24/100 */
+                        color #C5C8CF
+                >dd
+                    height 1rem /* 100/100 */
+                    line-height 1rem /* 100/100 */
+                    display flex
+                    justify-content space-between
+                    align-items center
+                    .icon-tel
+                        background url('../img/tel_icon.png') no-repeat
+                        background-size 100%
+                    span
+                        font-size .3rem /* 30/100 */
+                        color #FFFFFF
+                        display inline-block
+                    .name
+                        flex 1 2.2rem /* 220/100 */
+                        text-align center
+                        text-overflow ellipsis
+                        overflow hidden
+                        white-space nowrap
+                        word-wrap break-word
+                        word-break break-all
+                    .tel
+                        flex 1 3rem /* 300/100 */
+                        text-align left 
+                &:last-child
+                    border-bottom 0
+            .time
+                >dd
+                    justify-content center
+                    >input
+                        flex 1
+                        background transparent
+                        color #FFFFFF
+                        font-size .22rem /* 22/100 */
+                        height .3rem /* 30/100 */
+                        outline none
+                        border 0
+                        text-align center
+        .form
+            margin-top .4rem /* 40/100 */
+            background #FFFFFF
+            box-shadow 0px 3px 6px 3px rgba(238,238,238,1)
