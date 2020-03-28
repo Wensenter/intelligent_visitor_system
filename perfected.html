@@ -58,6 +58,7 @@
                         <div class="tkPhoto-box">
                             <i class="icon-tkPhoto"></i>
                         </div>
+                        <input accept="image/*" type="file" />
                     </dd>
                 </dl>
                 <dl class="main-visitor">
@@ -71,7 +72,7 @@
                     <dd>
                         <input type="text" placeholder="姓名">
                         <div class="select-box">
-                            <input type="text" placeholder="性别">
+                            <input type="text" placeholder="性别" readonly>
                             <ul class="select">
                                 <li>男</li>
                                 <li>女</li>
@@ -282,8 +283,8 @@
             $('.mask').hide();
         })
 
-    //删除访客
-        $('body').delegate('.delete','click',function(){
+        //删除访客
+        $('body').delegate('.delete','click tap',function(){
             var scroll_offset = $(this).parent().parent().prev().offset();
             $("body,html").animate({
                 scrollTop:scroll_offset.top
@@ -295,6 +296,19 @@
                 clearTimeout(timer)
                 $(this).parent().parent().remove();
             },300)
+            console.log(1)
         })
+    
+    //选取照片
+    $(function(){
+        var ua = navigator.userAgent.toLowerCase();
+        var isiOS = (ua.indexOf('iphone') != -1) || (ua.indexOf('ipad') != -1);  // ios终端
+        if(!isiOS){
+            $(".tkPhoto-box").next().attr('capture','camera');
+        }
+    })
+    $('.icon-tkPhoto').click(function(){
+        $(this).parent().next().click();
+    })
 </script>
 </html>

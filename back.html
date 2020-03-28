@@ -61,6 +61,7 @@
                                 <img src="img/edit_icon.png" class="edit">
                             </div>
                         </div>
+                        <input accept="image/*" type="file" />
                     </dd>
                 </dl>
                 <dl class="main-visitor">
@@ -285,7 +286,7 @@
             $('.mask').hide();
         })
 
-    //删除访客
+        //删除访客
         $('body').delegate('.delete','click',function(){
             var scroll_offset = $(this).parent().parent().prev().offset();
             $("body,html").animate({
@@ -299,5 +300,16 @@
                 $(this).parent().parent().remove();
             },300)
         })
+    //选取照片
+    $(function(){
+        var ua = navigator.userAgent.toLowerCase();
+        var isiOS = (ua.indexOf('iphone') != -1) || (ua.indexOf('ipad') != -1);  // ios终端
+        if(!isiOS){
+            $(".tkPhoto-box").next().attr('capture','camera');
+        }
+    })
+    $('.icon-tkPhoto').click(function(){
+        $(this).parent().next().click();
+    })
 </script>
 </html>

@@ -55,7 +55,7 @@
                     </dt>
                     <dd>
                         <ul>
-                            <li>30分钟</li>
+                            <li class="active">30分钟</li>
                             <li>1小时</li>
                             <li>2小时</li>
                             <li>3小时</li>
@@ -179,78 +179,9 @@
         $(this).parent().prev().val($(this).text());
     })
 
-    //弹窗
-        //添加物品
-        $('#addGood').click(function(){
-            $('.add_good_pop').show();
-            $('.mask').show();
-        })
-        $('.add_good_pop #close').click(function(){
-            $('.add_good_pop').hide();
-            $('.mask').hide();
-        })
-
-        //添加访客
-        $('.add-visitor').click(function(){
-            $('.add_visitor_pop').show();
-            $('.mask').show();
-        })
-
-        $('.add_visitor_pop button').click(function(){
-            var _html = `
-                    <dt>
-                        <span class="title">
-                            <i class="icon-user"></i>
-                            <span>随访人</span>
-                        </span>
-                        <i class="icon-delete delete"></i>
-                    </dt>
-                    <dd>
-                        <input type="text" placeholder="姓名">
-                        <div class="select-box">
-                            <input type="text" placeholder="性别">
-                            <ul class="select">
-                                <li>男</li>
-                                <li>女</li>
-                            </ul>
-                        </div>
-                        <input type="text" placeholder="身份证号">
-                        <input type="text" placeholder="手机号">
-                        <div class="select-box">
-                            <input type="text" placeholder="公司名称">
-                            <ul class="select">
-                                <li>傲天科技</li>
-                                <li>傲天科技有限公司</li>
-                            </ul>
-                        </div>
-                        <input type="text" placeholder="部门/职位">
-                    </dd>`;
-            if(!!$('.main-visitor').length)$('.main-visitor').after($('<dl class="visitor">').html(_html));
-            else $('.dl-idCard').after($('<dl class="visitor">').html(_html));
-            var scroll_offset = $('.visitor').last().offset();
-            $("body,html").animate({
-                scrollTop: scroll_offset?scroll_offset.top : 0
-            })
-        })
-
-        $('.add_visitor_pop #close,.add_visitor_pop button').click(function(){
-            $('.add_visitor_pop').hide();
-            $('.mask').hide();
-        })
-
-    //删除访客
-        $('body').delegate('.delete','click',function(){
-            var scroll_offset = $(this).parent().parent().prev().offset();
-            $("body,html").animate({
-                scrollTop:scroll_offset.top
-            })
-            $(this).parent().parent().animate({
-                height:0
-            },300)
-            var timer = setTimeout(()=>{
-                clearTimeout(timer)
-                $(this).parent().parent().remove();
-            },300)
-        })
+    // 选择时间段
+    $('.form ul li').click(function(){
+        $(this).addClass('active').siblings().removeClass('active');
+    })
 </script>
 </html>
