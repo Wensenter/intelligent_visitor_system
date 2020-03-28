@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>待完善信息</title>
+    <title>延期申请</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="plugins/datepick/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/delay.css">
     <script src="plugins/rem.js"></script>
 </head>
 <body>
@@ -15,13 +15,14 @@
         <!-- bannner -->
         <div class="banner">
             <h1 class="app-title">立讯精密访客预约系统</h1>
+            <span class="app-sub-title">申请延期</span>
         </div>
         <!-- content -->
         <div class="content">
             <!-- tip -->
             <div class="tip">
                 <i class="icon-tip"></i>
-                <span>请完善访客资料!</span>
+                <span>您的访客即将超时，是否申请延长访问时间？</span>
             </div>
             <!-- card -->
             <div class="card">
@@ -31,9 +32,7 @@
                         <span>被访人</span>
                     </dt>
                     <dd>
-                        <span class="name">李工</span>
-                        <span class="tel">18273646362</span>
-                        <i class="icon-tel"></i>
+                        <span class="name-list">张三峰、李世民、王祖贤等3人</span>
                     </dd>
                 </dl>
                 <dl class="time">
@@ -49,65 +48,22 @@
             </div>
             <!-- form -->
             <form class="form">
-                <dl class="dl-idCard">
+                <dl>
                     <dt>
-                        <i class="icon-idCard"></i>
-                        <span>身份证正面照片</span>
+                        <i class="icon-time"></i>
+                        <span>请选择延时时长</span>
                     </dt>
                     <dd>
-                        <div class="tkPhoto-box">
-                            <i class="icon-tkPhoto"></i>
-                        </div>
+                        <ul>
+                            <li>30分钟</li>
+                            <li>1小时</li>
+                            <li>2小时</li>
+                            <li>3小时</li>
+                        </ul>
                     </dd>
                 </dl>
-                <dl class="main-visitor">
-                    <dt>
-                        <span class="title">
-                            <i class="icon-user"></i>
-                            <span>主访客</span>
-                        </span>
-                        <i class="icon-delete delete"></i>
-                    </dt>
-                    <dd>
-                        <input type="text" placeholder="姓名">
-                        <div class="select-box">
-                            <input type="text" placeholder="性别">
-                            <ul class="select">
-                                <li>男</li>
-                                <li>女</li>
-                            </ul>
-                        </div>
-                        <input type="text" placeholder="身份证号">
-                        <input type="text" placeholder="手机号">
-                        <div class="select-box">
-                            <input type="text" placeholder="公司名称">
-                            <ul class="select">
-                                <li>傲天科技</li>
-                                <li>傲天科技有限公司</li>
-                            </ul>
-                        </div>
-                        <input type="text" placeholder="部门/职位">
-                    </dd>
-                </dl>
-                <dl class="goods">
-                    <dt>
-                        <i class="icon-good"></i>
-                        <span>随身物品</span>
-                    </dt>
-                    <dd>
-                        <div class="good-list">
-                            <span>手机 x2 <i class="icon-close"></i> </span>
-                            <span>笔记本电脑 <i class="icon-close"></i></span>
-                        </div>
-                        <button type="button" id="addGood">添加物品</button>
-                    </dd>
-                </dl>
-                <button type="button" class="add-visitor">添加访客</button>
+                <button type="button" class="sure-delay">确定延时</button>
             </form>
-            <div class="op">
-                <button type="button">暂存</button>
-                <button type="button">提交</button>
-            </div>
             <div class="footer">
                 <p class="app-order">订单：9327432885798</p>
                 <p class="copyright">本系统由广东源禾智智能科技有限公司开发</p>

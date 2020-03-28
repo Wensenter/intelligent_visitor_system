@@ -517,3 +517,214 @@
   border-radius: 0.47rem /* 47/100 */;
   outline: none;
 }
+.wrap .content .tip-success {
+  width: 100%;
+  height: 4.35rem /* 435/100 */;
+  border-radius: 0.2rem /* 20/100 */;
+  display: flex;
+  padding: 0.35rem /* 35/100 */;
+  justify-content: space-between;
+  background: #f9faec;
+  box-shadow: 0px 3px 6px 3px #e7eabd;
+}
+.wrap .content .tip-success >div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 3rem /* 300/100 */;
+}
+.wrap .content .tip-success >div .icon-success {
+  display: inline-block;
+  width: 0.5rem /* 50/100 */;
+  height: 0.5rem /* 50/100 */;
+  background: url("../img/big_success_icon.png") no-repeat;
+  background-size: 100%;
+}
+.wrap .content .tip-success >div p {
+  margin: 0;
+  line-height: 0.42rem /* 42/100 */;
+}
+.wrap .content .tip-success >div .tip-title {
+  font-size: 0.3rem /* 30/100 */;
+  color: #9db51d;
+  margin-top: 0.2rem /* 20/100 */;
+}
+.wrap .content .tip-success >div .tip-sub-title {
+  font-size: 0.24rem /* 24/100 */;
+  color: #666;
+  margin-top: 0.3rem /* 30/100 */;
+  text-align: center;
+}
+.wrap .content .tip-success >div .code {
+  width: 3rem /* 300/100 */;
+  height: 3rem /* 300/100 */;
+  background: #fff;
+  border-radius: 0.1rem /* 10/100 */;
+  box-shadow: 0px 3px 6px 3px #e7eabd;
+}
+.wrap .content .tip-success >div .code-text {
+  color: #9b9b9b;
+  font-size: 0.24rem /* 24/100 */;
+  margin-top: 0.2rem /* 20/100 */;
+}
+.wrap .content .tip-success >div:first-child {
+  width: 2.55rem /* 255/100 */;
+}
+.wrap .content .adress {
+  width: 100%;
+  border-radius: 0.2rem /* 20/100 */;
+  box-shadow: 0px 3px 6px 3px #eee;
+  background: #fff;
+}
+.wrap .content .adress dl {
+  padding: 0.3rem /* 30/100 */ 0.32rem /* 32/100 */ 0.14rem /* 14/100 */;
+  margin-top: 0.4rem /* 40/100 */;
+}
+.wrap .content .adress dl dt .icon-position {
+  display: inline-block;
+  width: 0.32rem /* 32/100 */;
+  height: 0.42rem /* 42/100 */;
+  margin-right: 0.24rem /* 24/100 */;
+  background: url("../img/position_icon.png") no-repeat;
+  background-size: 100%;
+  vertical-align: middle;
+}
+.wrap .content .adress dl dt span {
+  font-size: 0.24rem /* 24/100 */;
+  color: #9b9b9b;
+  vertical-align: middle;
+}
+.wrap .content .adress dl dd ul>li {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-indent: 0.55rem /* 55/100 */;
+  padding: 0.15rem /* 15/100 */ 0;
+}
+.wrap .content .adress dl dd ul>li >span {
+  color: #666;
+  font-size: 0.3rem /* 30/100 */;
+}
+.wrap .content .adress dl dd ul>li i {
+  display: inline-block;
+  width: 0.5rem /* 50/100 */;
+  height: 0.5rem /* 50/100 */;
+}
+.wrap .content .adress dl dd ul>li .icon-redNavigation {
+  background: url("../img/red_navigation_icon.png") no-repeat;
+  background-size: 100%;
+}
+.wrap .content .adress dl dd ul>li .icon-greenNavigation {
+  background: url("../img/green_navigation_icon.png") no-repeat;
+  background-size: 100%;
+}
+.wrap .content .visitor-info {
+  width: 100%;
+  border-radius: 0.2rem /* 20/100 */;
+  box-shadow: 0px 3px 6px 3px #eee;
+  background: #fff;
+  margin-top: 0.4rem /* 40/100 */;
+  padding: 0.3rem /* 14/100 */ 0.32rem /* 32/100 */ 0.14rem /* 14/100 */;
+}
+.wrap .content .visitor-info dl dt i {
+  vertical-align: middle;
+  display: inline-block;
+  width: 0.4rem /* 40/100 */;
+  height: 0.42rem /* 42/100 */;
+  margin-right: 0.24rem /* 24/100 */;
+}
+.wrap .content .visitor-info dl dt .icon-user {
+  width: 0.32rem /* 32/100 */;
+  background: url("../img/user_icon.png") no-repeat;
+  background-size: 100%;
+}
+.wrap .content .visitor-info dl dt span {
+  font-size: 0.24rem /* 24/100 */;
+  color: #9b9b9b;
+  vertical-align: middle;
+}
+.wrap .content .visitor-info dl dd {
+  padding: 0.4rem /* 40/100 */ 0;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .content .visitor-info dl dd span {
+  font-size: 0.3rem /* 30/100 */;
+  color: #4a4a4a;
+  display: inline-block;
+  width: 3rem /* 300/100 */;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.wrap .content .visitor-info dl dd .name {
+  text-indent: 0.6rem /* 60/100 */;
+}
+.wrap .content .visitor-info dl dd .tel {
+  text-align: end;
+}
+.wrap .content .visitor-info .visitor-list {
+  margin-bottom: 0;
+}
+.wrap .content .visitor-info .visitor-list dt .icon-visitor {
+  background: url("../img/visitor_icon.png") no-repeat;
+  background-size: 100%;
+}
+.wrap .content .visitor-info .visitor-list dd {
+  border-bottom: 0;
+  padding: 0;
+}
+.wrap .content .visitor-info .visitor-list dd >ul {
+  width: 100%;
+  margin-bottom: 0;
+}
+.wrap .content .visitor-info .visitor-list dd >ul >li {
+  height: 2.1rem /* 210/100 */;
+  border-bottom: 1px solid #bbb;
+  margin-left: 0.6rem /* 60/100 */;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.44rem /* 44/100 */;
+}
+.wrap .content .visitor-info .visitor-list dd >ul >li >div {
+  display: flex;
+  flex-direction: column;
+}
+.wrap .content .visitor-info .visitor-list dd >ul >li >div span {
+  width: 100%;
+}
+.wrap .content .visitor-info .visitor-list dd >ul >li >div i {
+  display: inline-block;
+  width: 0.4rem /* 40/100 */;
+  height: 0.4rem /* 40/100 */;
+  margin-top: 0.48rem /* 48/100 */;
+}
+.wrap .content .visitor-info .visitor-list dd >ul >li >div .icon-man {
+  background: url("../img/man_icon.png") no-repeat;
+  background-size: 100%;
+}
+.wrap .content .visitor-info .visitor-list dd >ul >li >div .icon-woman {
+  background: url("../img/woman_icon.png") no-repeat;
+  background-size: 100%;
+}
+.wrap .content .visitor-info .visitor-list dd >ul >li >div:first-child {
+  width: 1rem /* 200/100 */;
+}
+.wrap .content .visitor-info .visitor-list dd >ul >li >div:last-child {
+  width: 4rem /* 300/100 */;
+}
+.wrap .content .visitor-info .visitor-list dd >ul >li >div:last-child >span {
+  font-size: 0.24rem /* 24/100 */;
+  color: #666;
+  line-height: 0.33rem /* 33/100 */;
+  text-align: end;
+  margin-bottom: 0.15rem /* 15/100 */;
+}
+.wrap .content .visitor-info .visitor-list dd >ul >li >div:last-child >span:last-child {
+  margin-bottom: 0;
+}
+.wrap .content .visitor-info .visitor-list dd >ul >li:last-child {
+  border-bottom: 0;
+}

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>审核通过</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="plugins/datepick/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/pass.css">
+    <script src="plugins/rem.js"></script>
+</head>
+<body>
+    <!-- wrap -->
+    <div class="wrap">
+        <!-- bannner -->
+        <div class="banner">
+            <h1 class="app-title">立讯精密访客预约系统</h1>
+        </div>
+        <!-- content -->
+        <div class="content">
+            <!-- tip -->
+            <div class="tip-success">
+                <div>
+                    <i class="icon-success"></i>
+                    <p class="tip-title">立讯欢迎您的到访</p>
+                    <p class="tip-sub-title">请在入园时提前联系被访人，并在入园处打印访客凭条！</p>
+                </div>
+                <div>
+                    <img alt="" class="code">
+                    <p class="code-text">扫描二维码打印访客凭条</p>
+                </div>
+            </div>
+            <!-- card -->
+            <div class="card">
+                <dl>
+                    <dt>
+                        <i class="icon-user"></i>
+                        <span>被访人</span>
+                    </dt>
+                    <dd>
+                        <span class="name">李工</span>
+                        <span class="tel">18273646362</span>
+                        <i class="icon-tel"></i>
+                    </dd>
+                </dl>
+                <dl class="time">
+                    <dt>
+                        <i class="icon-date"></i>
+                        <span>预约拜访时间</span>
+                    </dt>
+                    <dd>
+                        <span  readonly>2020/01/10 星期四 10:00 </span>
+                        <span  readonly>2020/01/10 星期四 10:00 </span>
+                    </dd>
+                </dl>
+            </div>
+            <!-- adress -->
+            <div class="adress">
+                <dl>
+                    <dt>
+                        <i class="icon-position"></i>
+                        <span>访问地址</span>
+                    </dt>
+                    <dd>
+                        <ul>
+                            <li>
+                                <span>东莞市葵青路17号立讯精密新厂区</span>
+                                <i class="icon-redNavigation"></i>
+                            </li>
+                            <li>
+                                <span>园区3栋6楼</span>
+                                <i class="icon-greenNavigation"></i>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+            <!-- visitor-info -->
+            <div class="visitor-info">
+                <dl>
+                    <dt>
+                        <i class="icon-user"></i>
+                        <span>主访客</span>
+                    </dt>
+                    <dd>
+                        <span class="name">张三丰</span>
+                        <span class="tel">18273646362</span>
+                    </dd>
+                </dl>
+                <dl class="visitor-list">
+                    <dt>
+                        <i class="icon-visitor"></i>
+                        <span>访客</span>
+                    </dt>
+                    <dd>
+                        <ul>
+                            <li>
+                                <div>
+                                    <span>李四</span>
+                                    <i class="icon-man"></i>
+                                </div>
+                                <div>
+                                    <span>18273646362</span>
+                                    <span>430516198811020001</span>
+                                    <span>携带笔记本电脑 x2、手机 x1</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <span>王武</span>
+                                    <i class="icon-woman"></i>
+                                </div>
+                                <div>
+                                    <span>18273646362</span>
+                                    <span>430516198811020001</span>
+                                    <span>携带笔记本电脑 x2、手机 x1</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+            <div class="footer">
+                <p class="app-order">订单：9327432885798</p>
+                <p class="copyright">本系统由广东源禾智智能科技有限公司开发</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="plugins/jquery-2.4-min.js"></script>
+<script src="plugins/datepick/js/datepick.js"></script>
+<script>
+    //select
+    $('.select-box input').focus(function(){
+        $(this).next('ul').show(300)
+    }).blur(function(){
+        $(this).next('ul').hide(300)
+    })
+    $('.select-box ul li').click(function(){
+        $(this).parent().prev().val($(this).text());
+    })
+
+    //弹窗
+        //添加物品
+        $('#addGood').click(function(){
+            $('.add_good_pop').show();
+            $('.mask').show();
+        })
+        $('.add_good_pop #close').click(function(){
+            $('.add_good_pop').hide();
+            $('.mask').hide();
+        })
+
+        //添加访客
+        $('.add-visitor').click(function(){
+            $('.add_visitor_pop').show();
+            $('.mask').show();
+        })
+
+        $('.add_visitor_pop button').click(function(){
+            var _html = `
+                    <dt>
+                        <span class="title">
+                            <i class="icon-user"></i>
+                            <span>随访人</span>
+                        </span>
+                        <i class="icon-delete delete"></i>
+                    </dt>
+                    <dd>
+                        <input type="text" placeholder="姓名">
+                        <div class="select-box">
+                            <input type="text" placeholder="性别">
+                            <ul class="select">
+                                <li>男</li>
+                                <li>女</li>
+                            </ul>
+                        </div>
+                        <input type="text" placeholder="身份证号">
+                        <input type="text" placeholder="手机号">
+                        <div class="select-box">
+                            <input type="text" placeholder="公司名称">
+                            <ul class="select">
+                                <li>傲天科技</li>
+                                <li>傲天科技有限公司</li>
+                            </ul>
+                        </div>
+                        <input type="text" placeholder="部门/职位">
+                    </dd>`;
+            $('.main-visitor').after($('<dl class="visitor">').html(_html));
+            var scroll_offset = $('.visitor').last().offset();
+            $("body,html").animate({
+                scrollTop:scroll_offset.top
+            })
+        })
+
+        $('.add_visitor_pop #close,.add_visitor_pop button').click(function(){
+            $('.add_visitor_pop').hide();
+            $('.mask').hide();
+        })
+
+    //删除访客
+        $('body').delegate('.delete','click',function(){
+            var scroll_offset = $(this).parent().parent().prev().offset();
+            $("body,html").animate({
+                scrollTop:scroll_offset.top
+            })
+            $(this).parent().parent().animate({
+                height:0
+            },300)
+            var timer = setTimeout(()=>{
+                clearTimeout(timer)
+                $(this).parent().parent().remove();
+            },300)
+        })
+</script>
+</html>

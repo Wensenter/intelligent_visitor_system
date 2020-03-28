@@ -10,15 +10,14 @@
         .app-title
             color #fff
             font-size .48rem /* 48/100 */
-            margin-top 1.2rem /* 120/100 */
+            margin-top 1.4rem /* 120/100 */
             padding-left .25rem /* 25/100 */
             font-weight bold
-        .app-order
-            color #C5C8CF
-            font-size .24rem /* 24/100 */
-            margin-top .3rem /* 30/100 */
-            text-align right
-            padding-right .3rem /* 30/100 */
+        .app-sub-title
+            font-size .3rem /* 30/100 */
+            padding-left .25rem /* 25/100 */
+            font-weight 600
+            color #fff
     .content
         min-height calc(100vh - 3.85rem /* 385/100 */+ 1.1rem /* 110/100 */)
         border-radius .5rem /* 50/100 */ .5rem /* 50/100 */ 0 0
@@ -33,7 +32,6 @@
             font-size .24rem /* 24/100 */
             color #666
             box-shadow 0px 3px 6px 3px rgba(239,227,194,1)
-            height .58rem /* 58/100 */
             line-height .58rem /* 58/100 */
             padding 0 .3rem /* 30/100 */
             .icon-tip
@@ -45,6 +43,11 @@
                 background-size 100%
                 vertical-align middle
                 margin-right .24rem /* 24/100 */
+            span
+                line-height .33rem /* 33/100 */
+        .tip-warning
+            display flex
+            padding  0.13rem/* 13/100 */ .3rem /* 30/100 */
         .card
             width 100%
             background #636A84
@@ -60,6 +63,7 @@
                     width .4rem /* 40/100 */
                     height .4rem /* 40/100 */
                     margin-right .24rem /* 24/100 */
+                    vertical-align middle
                 >dt
                     .icon-user
                         background url('../img/user_icon.png') no-repeat
@@ -70,6 +74,8 @@
                     span
                         font-size .24rem /* 24/100 */
                         color #C5C8CF
+                        vertical-align middle
+                        font-weight 400
                 >dd
                     height 1rem /* 100/100 */
                     line-height 1rem /* 100/100 */
@@ -99,15 +105,15 @@
             .time
                 >dd
                     justify-content center
-                    >input
+                    >span
                         flex 1
                         background transparent
                         color #FFFFFF
                         font-size .22rem /* 22/100 */
-                        height .3rem /* 30/100 */
                         outline none
                         border 0
                         text-align center
+                        margin-top .4rem /* 40/100 */
         .form
             margin-top .4rem /* 40/100 */
             background #FFFFFF
@@ -125,9 +131,6 @@
                     .icon-idCard
                         background url('../img/idCard_icon.png') no-repeat
                         background-size 100%
-                    .icon-user
-                        background url('../img/user_icon.png') no-repeat
-                        background-size 100%
                     .icon-good
                         background url('../img/good_icon.png') no-repeat
                         background-size 100%
@@ -135,22 +138,39 @@
                         font-size .24rem /* 24/100 */
                         color #9B9B9B
                         vertical-align middle
+                        font-weight 400
                 >dd
                     .tkPhoto-box
                         height 1.5rem /* 150/100 */
                         width 100%
                         border-bottom .01rem /* 1/100 */solid #CCCCCC
                         text-align center
+                        .img-box
+                            width 1.55rem /* 155/100 */
+                            height 1rem /* 100/100 */
+                            border-radius .2rem /* 20/100 */
+                            box-shadow 0px 3px 6px 3px rgba(238,238,238,1)
+                            margin .23rem /* 23/100 */ auto 0
+                            position relative
+                            .idCard
+                                width 100%
+                                height 100%
+                            .edit
+                                position absolute
+                                right 0
+                                top 0
+                                width .44rem /* 44/100 */
+                                height .44rem /* 44/100 */
                     .icon-tkPhoto
                         margin-top .35rem /* 35/100 */
                         display inline-block
-                        width .5rem /* 50/100 */
-                        height .5rem /* 50/100 */
+                        width .6rem /* 60/100 */
+                        height .6rem /* 60/100 */
                         background url('../img/scan_icon.png') no-repeat
                         background-size 100%
                     >input[type='text']
+                        display block
                         width 4.98rem /* 498/100 */
-                        height .42rem /* 42/100 */
                         padding-top .5rem /* 50/100 */
                         border 0
                         outline none
@@ -161,12 +181,260 @@
                         text-indent .1rem /* 10/100 */
                         &::-webkit-input-placeholder
                             color #BBBBBB
-                    .sex
+                        &:focus
+                            border-bottom .02rem /* 2/100 */ solid #B1CC1E
+                    .select-box
                         position relative
-                        &:after
-                            content ''
-                            display inline-block
-            .main-visitor
+                        padding 0 .5rem /* 50/100 */0 .6rem /* 60/100 */
+                        >input[type='text']
+                            display block
+                            width 4.98rem /* 498/100 */
+                            padding-top .5rem /* 50/100 */
+                            border 0
+                            outline none
+                            border-bottom  .01rem /* 1/100 */ solid #D8D8D8
+                            font-size .3rem /* 30/100 */
+                            color #666
+                            text-indent .1rem /* 10/100 */
+                            &::-webkit-input-placeholder
+                                color #BBBBBB
+                            &:focus
+                                border-bottom .02rem /* 2/100 */ solid #B1CC1E
+                        .select
+                            display none
+                            position absolute
+                            top .98rem /* 98/100 */
+                            width 4.98rem /* 498/100 */
+                            margin 0
+                            background #F7F7F7
+                            box-shadow 0px 3px 6px 3px rgba(238,238,238,1)
+                            &>li
+                                font-size .24rem /* 24/100 */
+                                color #666666
+                                padding .2rem /* 20/100 */ .35rem /* 35/100 */ 0 .2rem /* 20/100 */
+                    .good-list
+                        display flex
+                        justify-content flex-start
+                        flex-wrap wrap
+                        margin-top .25rem /* 25/100 */
+                        overflow hidden
+                        >span
+                            width 2.33rem /* 233/100 */
+                            height .55rem /* 55/100 */
+                            border-radius .25rem /* 25/100 */
+                            border 1px solid #B1CC1E
+                            white-space nowrap
+                            text-overflow ellipsis
+                            overflow hidden
+                            font-size .3rem /* 30/100 */
+                            color #666
+                            text-indent .15rem /* 15/100 */
+                            line-height .55rem /* 55/100 */
+                            margin-left .6rem /* 60/100 */
+                            margin-bottom .4rem /* 40/100 */
+                            display flex
+                            justify-content space-between
+                            align-items center
+                            padding-right .1rem /* 10/100 */
+                            .icon-close
+                                display inline-block
+                                width .3rem /* 30/100 */
+                                height .3rem /* 30/100 */
+                                background url('../img/close_icon.png') no-repeat
+                                background-size 100%
+                    >button
+                        display block
+                        width 2.33rem /* 233/100 */
+                        height .55rem /* 55/100 */
+                        border-radius .28rem /* 28/100 */
+                        box-shadow 0px 3px 6px 3px rgba(229,229,229,1)
+                        background #FFFFFF
+                        color #B1CC1E
+                        font-size .26rem /* 26/100 */
+                        border 1px solid #B1CC1E
+                        margin 0 auto .4rem /* 40/100 */
+                        outline none
+            .main-visitor,.visitor
                 padding-top .25rem /* 25/100 */
+                dt
+                    display flex
+                    justify-content space-between
+                    .title
+                        .icon-user
+                            display inline-block
+                            width .4rem /* 40/100 */
+                            height .4rem /* 40/100 */
+                            vertical-align middle
+                            margin-right .18rem /* 18/100 */
+                            background url('../img/user_icon.png') no-repeat
+                            background-size 100%
+                    .icon-delete
+                        display inline-block
+                        width .4rem /* 40/100 */
+                        height .4rem /* 40/100 */
+                        background url('../img/delete_icon.png') no-repeat
+                        background-size 100%
+                dd
+                    margin-top .1rem /* 10/100 */
             .goods
                 padding-top .2rem /* 20/100 */
+                >dd
+                    border-bottom 1px solid #CCCCCC
+            .add-visitor
+                width 100%
+                border 1px solid #D5E679
+                background #B1CC1E
+                box-shadow 0px 3px 6px 3px rgba(213,230,121,1)
+                height .94rem /* 94/100 */
+                line-height .94rem /* 94/100 */
+                color #ffffff
+                font-size .32rem /* 32/100 */
+                border-radius .47rem /* 47/100 */
+                margin-top .4rem /* 40/100 */
+                outline none
+        .op
+            margin-top .6rem /* 60/100 */
+            display flex
+            justify-content space-between
+            >button
+                width 3.24rem /* 324/100 */
+                height .94rem /* 94/100 */
+                border-radius .47rem /* 47/100 */
+                outline none
+                border 0
+                font-size .32rem /* 32/100 */
+                font-weight 500
+                &:first-child
+                    background #EEEEEE
+                    box-shadow 0px 3px 6px 3px rgba(219,220,224,1)
+                    color #9B9B9B
+                &:last-child
+                    background #636A84
+                    box-shadow 0px 3px 6px 3px rgba(144,152,193,1)
+                    color #FFFFFF
+        .footer
+            margin-top .4rem /* 40/100 */
+            text-align center
+            font-size .2rem /* 20/100 */
+            .app-order
+                color #E5E5E5
+            .copyright
+                color #CCCCCC
+.mask
+    position fixed
+    top 0 
+    left 0
+    width 100%
+    height 100%
+    background rgba(0,0,0,0.5)
+    font-size 0
+    .pop
+        position absolute
+        width 6.72rem /* 672/100 */
+        left 50%
+        top 50%
+        transform translate(-50%,-50%)
+        background #FFFFFF
+        box-shadow 0px 3px 6px 3px rgba(238,238,238,1)
+        padding .35rem /* 35/100 */.45rem /* 45/100 */
+        border-radius .2rem /* 20/100 */
+        >dl
+            >dt
+                display flex
+                justify-content space-between
+                .head
+                    >i
+                        display inline-block
+                        width .4rem /* 40/100 */
+                        height .4rem /* 40/100 */
+                        margin-right .16rem /* 16/100 */
+                        vertical-align middle
+                    .icon-good
+                        background url('../img/good_icon.png') no-repeat
+                        background-size 100%
+                    .icon-visitor
+                        background url('../img/visitor_icon.png') no-repeat
+                        background-size 100%
+                    >span
+                        font-size .24rem /* 24/100 */
+                        color #9B9B9B
+                        vertical-align middle
+                .icon-pop-close
+                    display inline-block
+                    width .4rem /* 40/100 */
+                    height .4rem /* 40/100 */
+                    background url('../img/pop_close_icon.png') no-repeat
+                    background-size 100%
+            >dd
+                .pop-form
+                    padding 0 .55rem /* 55/100 */
+                    >input
+                        display block
+                        width 100%
+                        padding-top .5rem /* 50/100 */
+                        font-size .3rem /* 30/100 */
+                        color #666
+                        border 0
+                        border-bottom 1px solid #D8D8D8
+                        outline none    
+                        &::-webkit-input-placeholder
+                            color #BBBBBB
+                        &:focus
+                            border-color #B1CC1E
+                    .input-box
+                        >input
+                            display block
+                            width 100%
+                            padding-top .5rem /* 50/100 */
+                            font-size .3rem /* 30/100 */
+                            color #666
+                            border 0
+                            border-bottom 1px solid #D8D8D8
+                            outline none    
+                            text-indent .1rem /* 10/100 */
+                            &::-webkit-input-placeholder
+                                color #BBBBBB
+                            &:focus
+                                border-color #B1CC1E
+                    >button
+                        display block
+                        width 2.9rem /* 290/100 */
+                        height .94rem /* 94/100 */
+                        background #B1CC1E
+                        box-shadow 0px 3px 6px 3px rgba(213,230,121,1)
+                        border-radius .47rem /* 47/100 */
+                        margin .4rem /* 40/100 */auto 0
+                        border 0
+                        outline none
+                        color #fff
+                        font-size .32rem /* 32/100 */
+                    >ul
+                        margin-top .4rem /* 40/100 */
+                        >li
+                            width 100%
+                            height 1.1rem /* 110/100 */
+                            border-bottom 1px solid #E5E5E5
+                            padding-top .15rem /* 15/100 */
+                            >p
+                                font-size .3rem /* 30/100 */
+                                color #000000
+                                margin 0
+                                .status
+                                    font-size .24rem /* 24/100 */
+                                    color #636A84
+                            .tel
+                                font-size .24rem /* 24/100 */
+                                color #666666
+                            &:first-child
+                                border-top 1px solid #E5E5E5
+                >button
+                    margin-top .55rem /* 55/100 */
+                    width 100%
+                    height .94rem /* 94/100 */
+                    background #B1CC1E
+                    border 1px solid #D5E679
+                    color #fff
+                    font-size .32rem /* 32/100 */
+                    box-shadow 0px 3px 6px 3px rgba(213,230,121,1)
+                    border-radius .47rem /* 47/100 */
+                    outline none

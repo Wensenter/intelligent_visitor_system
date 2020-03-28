@@ -1,0 +1,177 @@
+@import 'base.styl'
+.wrap .content
+    .tip-success
+        width 100%
+        height 4.35rem /* 435/100 */
+        border-radius .2rem /* 20/100 */
+        display flex
+        padding .35rem /* 35/100 */
+        justify-content space-between
+        background #F9FAEC
+        box-shadow 0px 3px 6px 3px rgba(231,234,189,1)
+        >div
+            display flex
+            flex-direction column
+            align-items center
+            width 3rem /* 300/100 */
+            .icon-success
+                display inline-block
+                width .5rem /* 50/100 */
+                height .5rem /* 50/100 */
+                background url('../img/big_success_icon.png') no-repeat
+                background-size 100%
+            p
+                margin 0
+                line-height .42rem /* 42/100 */
+            .tip-title
+                font-size .3rem /* 30/100 */
+                color #9DB51D
+                margin-top .2rem /* 20/100 */
+            .tip-sub-title
+                font-size .24rem /* 24/100 */
+                color #666666
+                margin-top .3rem /* 30/100 */
+                text-align center
+            .code
+                width 3rem /* 300/100 */
+                height 3rem /* 300/100 */
+                background #fff
+                border-radius .1rem /* 10/100 */
+                box-shadow 0px 3px 6px 3px rgba(231,234,189,1)
+            .code-text
+                color #9B9B9B
+                font-size .24rem /* 24/100 */
+                margin-top .2rem /* 20/100 */
+            &:first-child
+                width 2.55rem /* 255/100 */
+    .adress
+        width 100%
+        border-radius .2rem /* 20/100 */
+        box-shadow 0px 3px 6px 3px rgba(238,238,238,1)
+        background #FFFFFF
+        dl
+            padding .3rem /* 30/100 */.32rem /* 32/100 */.14rem /* 14/100 */
+            margin-top .4rem /* 40/100 */
+            dt
+                .icon-position
+                    display inline-block
+                    width .32rem /* 32/100 */
+                    height .42rem /* 42/100 */
+                    margin-right .24rem /* 24/100 */
+                    background url('../img/position_icon.png') no-repeat
+                    background-size 100%
+                    vertical-align middle
+                span
+                    font-size .24rem /* 24/100 */
+                    color #9B9B9B
+                    vertical-align middle
+            dd
+                ul>li
+                    width 100%
+                    display flex
+                    justify-content space-between
+                    align-items center
+                    text-indent .55rem /* 55/100 */
+                    padding .15rem /* 15/100 */0
+                    >span
+                        color #666
+                        font-size .3rem /* 30/100 */
+                    i
+                        display inline-block
+                        width .5rem /* 50/100 */
+                        height .5rem /* 50/100 */
+                    .icon-redNavigation
+                        background url('../img/red_navigation_icon.png') no-repeat
+                        background-size 100%
+                    .icon-greenNavigation
+                        background url('../img/green_navigation_icon.png') no-repeat
+                        background-size 100%
+    .visitor-info
+        width 100%
+        border-radius .2rem /* 20/100 */
+        box-shadow 0px 3px 6px 3px rgba(238,238,238,1)
+        background #FFFFFF
+        margin-top .4rem /* 40/100 */  
+        padding .30rem /* 14/100 */.32rem /* 32/100 */.14rem /* 14/100 */
+        dl
+            dt
+                i
+                    vertical-align middle
+                    display inline-block
+                    width .4rem /* 40/100 */
+                    height .42rem /* 42/100 */
+                    margin-right .24rem /* 24/100 */
+                .icon-user
+                    width .32rem /* 32/100 */
+                    background url('../img/user_icon.png') no-repeat
+                    background-size 100%
+                span
+                    font-size .24rem /* 24/100 */
+                    color #9B9B9B
+                    vertical-align middle
+            dd
+                padding .4rem /* 40/100 */0
+                border-bottom 1px solid #CCCCCC
+                display flex
+                justify-content space-between
+                span
+                    font-size .3rem /* 30/100 */
+                    color #4A4A4A
+                    display inline-block
+                    width 3rem /* 300/100 */
+                    white-space nowrap
+                    text-overflow ellipsis
+                    overflow hidden
+                .name
+                    text-indent .6rem /* 60/100 */
+                .tel
+                    text-align end
+        .visitor-list
+            margin-bottom 0
+            dt
+                .icon-visitor
+                    background url('../img/visitor_icon.png') no-repeat
+                    background-size 100%
+            dd
+                border-bottom 0
+                padding 0
+                >ul
+                    width 100%
+                    margin-bottom 0
+                    >li
+                        height 2.1rem /* 210/100 */
+                        border-bottom 1px solid #BBBBBB
+                        margin-left .6rem /* 60/100 */
+                        display flex
+                        justify-content space-between
+                        padding-top .44rem /* 44/100 */
+                        >div
+                            display flex
+                            flex-direction column
+                            span
+                                width 100%
+                            i
+                                display inline-block
+                                width .4rem /* 40/100 */
+                                height .4rem /* 40/100 */
+                                margin-top .48rem /* 48/100 */
+                            .icon-man
+                                background url('../img/man_icon.png') no-repeat
+                                background-size 100%
+                            .icon-woman
+                                background url('../img/woman_icon.png') no-repeat
+                                background-size 100%
+                            &:first-child
+                                width 1rem /* 200/100 */
+                            &:last-child
+                                width 4rem /* 300/100 */
+                                >span
+                                    font-size .24rem /* 24/100 */
+                                    color #666
+                                    line-height .33rem /* 33/100 */
+                                    text-align end
+                                    margin-bottom .15rem /* 15/100 */
+                                    &:last-child
+                                        margin-bottom 0
+                        &:last-child
+                            border-bottom 0
